@@ -1,17 +1,18 @@
 class Question {
-  
-  late int id;
-  late String question;
-  late String image;
-  late List<String> wrong_answer;
-  late String good_answer;
+
+  String question;
+  bool reponse;
+  String explication;
+  String imagePath;
 
   Question({
-    required this.id,
     required this.question,
-    required this.image,
-    required this.wrong_answer,
-    required this.good_answer
+    required this.reponse,
+    required this.explication,
+    required this.imagePath,
   });
+
+  String getImage() => 'images/$imagePath';
+
 }
 
